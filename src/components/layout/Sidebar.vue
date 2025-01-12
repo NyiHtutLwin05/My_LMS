@@ -22,6 +22,11 @@ const isActive = (path: string) => route.path === path;
 
 <template>
   <aside class="w-64 h-full bg-white shadow-md">
+    <div class="text-center">
+      <h1 class="relative text-xl font-bold text-primary bottom-11">
+        LMS Platform
+      </h1>
+    </div>
     <div class="h-full px-3 py-4">
       <nav class="space-y-1">
         <router-link

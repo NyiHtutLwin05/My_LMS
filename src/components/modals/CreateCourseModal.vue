@@ -65,7 +65,9 @@ const resetForm = () => {
 </script>
 
 <template>
-  <div v-if="props.isOpen" class="fixed inset-0 z-50 overflow-y-auto">
+  <div
+    v-if="props.isOpen"
+    class="fixed inset-0 z-50 overflow-y-auto no-scrollbar">
     <div class="flex items-center justify-center min-h-screen p-4">
       <!-- Backdrop -->
       <div
@@ -185,3 +187,14 @@ const resetForm = () => {
     </div>
   </div>
 </template>
+<style scoped>
+.no-scrollbar {
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and newer Edge */
+}
+</style>
